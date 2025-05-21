@@ -23,7 +23,7 @@ if uploaded_files:
                 text_cols = df.select_dtypes(include="object").columns
                 df[text_cols] = df[text_cols].apply(lambda s: s.str.strip())
 
-                # Save cleaned CSV to buffer
+                # Save
                 cleaned_csv = io.StringIO()
                 df.to_csv(cleaned_csv, index=False)
 
